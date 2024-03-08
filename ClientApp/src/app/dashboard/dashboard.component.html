@@ -1,0 +1,21 @@
+<h1>Dashboard</h1>
+
+<div class="flex flex-column w-full gap-2">
+  <div class="flex flex-row">
+    <input
+      pInputText
+      type="text"
+      [(ngModel)]="localRegistryUrl"
+      placeholder="local Registry"
+      class="w-full"
+    />
+  </div>
+  <div class="flex flex-row gap-2">
+    <button pButton (click)="count()" label="count"></button>
+  </div>
+</div>
+
+<p-card header="Anzahl AAS">
+  <p>Die Anzahl der AAS in lokaler Regegistry: {{ countReg }}</p>
+  <p>Die Anzahl der AAS im lokalen Repo: {{ countRepo }}</p>
+</p-card>
